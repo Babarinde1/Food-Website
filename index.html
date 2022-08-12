@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>food website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+   html,body{
+     font-family:"Verdana",sans-serif
+   }
+   h1,h2,h3,h4,h5,h6{
+     font-family:"Segoe UI", sans-serif
+   }
+   </style>
+</head>
+<body>
+
+<!--nav bar-->
+<div class="w3-bar w3-top w3-teal">
+<a href="#home" class="w3-bar-item w3-ripple w3-col w3-red w3-button">Home</a>
+<a href="#order" class="w3-bar-item w3-ripple w3-col w3-hide-small w3-button">Order Zone</a>
+<a href="#contact" class="w3-bar-item w3-ripple w3-hide-small  w3-col w3-button">Contact</a>
+<a href="#about" class="w3-bar-item w3-ripple w3-col w3-hide-small w3-button">About us</a>
+   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+  
+<!--end of nav bar-->
+</div>
+<!--Dropdown content-->
+<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#order" class="w3-bar-item w3-button">Order Zone</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  <a href="#about" class="w3-bar-item w3-button">About Us</a>
+</div>
+  
+<!--startcontent-->
+<div class="w3-container w3-animate-zoom" id="home">
+<!--slides-->
+<img src="food1.jpeg" class="slides"style="width:100%;height:300px;">
+<img src="food2.jpeg" class="slides"style="width:100%;height:300px;"">
+
+<img src="food3.jpeg" class="slides"style="width:100%;height:300px;"">
+<img src="food4.jpeg" class="slides"style="width:100%;height:300px;"">
+<div class="w3-display-container w3-padding w3-center w3-light-grey">
+<h1>ALMOND FOOD SERVICES.</h1>
+
+</div>
+<!--about-->
+<div id="about"class="w3-container w3-animate-zoom w3-padding-32">
+<h1 class="w3-center w3-opacity">The Band</h1>
+<p>The restaurant menu is organized by categories (appetizers, soups, salads, entrees, sides, and drinks) of menu items. The main objective builds the system is to provide ordering and reservation service online to the customer. Each menu item has a name, price, and associated recipe. A recipe for a menu item has a chef, preparation instruction, and associated ingredients. With this system online, ordering and reservation management will become easier and systematic to replace a traditional system where are still using paper. To resister a meal online, the customer has to become a member first then he can access the later part of the site. This project is to facilitate customers for making online ordering and reservations. The option of becoming a member was only an attempt to avoid (to some extent) placing the fake bookings.
+</p>
+<div class="w3-container w3-card-4">
+<img src="me.jpg" style="width:100%;height:300px">
+<hr>
+<h2>Member</h2>
+<h3>Babarinde Johnson</h3>
+<h4 style="text-shadow:0px 0px 2px">C.E.O</h4>
+</div>
+</div>
+<!--order zone-->
+<div id="order" class="w3-container w3-animate-fadding w3-center">
+<h1><u>Order Zone</u></h1></div>
+<div class="w3-row">
+<div class="w3-half w3-mobile w3-center w3-margin-top w3-margin-bottom w3-card" >
+<h2>Pizza</h2>
+<img src="pizza.jpeg" style="width:100%;height:200px"><br>
+<h3>Price:$10</h3><br>
+<button id="myBtn" onclick="myOrder()" class="w3-button w3-round w3-margin-bottom w3-padding w3-hover-red w3-ripple w3-red" style="width:50%">Order</button>
+</div>
+
+<div class="w3-half w3-container w3-center w3-margin-top w3-margin-bottom w3-card" >
+<h2>Hamburger</h2>
+<img src="hamburger1.jpeg" style="width:100%;height:200px">
+<h3>Price:$15</h3><br>
+<button id="myBtn1" onclick="myOrder()" class="w3-button w3-round w3-margin-bottom w3-padding w3-hover-red w3-ripple w3-red" style="width:50%">Order</button>
+</div>
+</div>
+ <div class="w3-row"> 
+<div class="w3-half w3-container w3-center w3-margin-top w3-margin-bottom w3-card" >
+<h2>Poke Bowl</h2>
+<img src="poke.jpg" style="width:100%;height:200px"><br>
+<h3>Price:$9</h3>
+
+<button id="myBtn2" onclick="myOrder()" class="w3-button w3-round w3-margin-bottom w3-padding w3-hover-red w3-ripple w3-red" style="width:50%">Order</button>
+</div>
+
+<div class="w3-half w3-container w3-center w3-margin-top w3-margin-bottom  w3-card" >
+<h2>Fries Malt Vinegar</h2>
+<img src="vinegar.jpg" style="width:100%;height:200px">
+<h3>Price:$15</h3>
+<button id="myBtn3" onclick="myOrder()" class="w3-button w3-round w3-margin-bottom w3-padding w3-hover-red w3-ripple w3-red" style="width:50%">Order</button>
+</div>
+<!--end order zone-->
+</div>
+<!--Pizza modal-->
+<div class="w3-modal" id="odal">
+<div class="w3-modal-content w3-animate-zoom">
+<header class="w3-container w3-teal"><h3>Alert!</h3>
+<span onclick="document.getElementById('odal').style.display='none'" class="w3-button w3-xlarge w3-display-topright">&times;</span>
+</header>
+<div class="w3-container">
+<p style="font-size:20px;">Payment</p>
+Accepted Cards:<br>
+<i class="fa fa-cc-visa w3-xlarge" style="color:navy"></i>
+  <i class="fa fa-cc-amex w3-xlarge" style="color:blue"></i>
+ <i class="fa fa-cc-mastercard w3-xlarge" style="color:red"></i>
+ <i class="fa fa-cc-discover w3-xlarge" style="color:orange"></i>
+<br></br>
+ <form class="w3-form">
+ <label><b>Name On Card:</b></label>
+ <input type="text" class="w3-input w3-border w3-lightgrey" placeholder="Babarinde Johnson Omotayo"/>
+<label><b>Credit Card Number:</b></label>
+ <input type="number" class="w3-input w3-border w3-lightgrey" placeholder="1111-2222-3333-4"/>
+<label><b>Exp month:</b></label>
+ <input type="text"  class="w3-input w3-border w3-lightgrey" placeholder="July"/>
+<label><b>CVV</b></label>
+ <input type="number" class="w3-input w3-border w3-lightgrey" placeholder="481"/>
+ <label><b>Exp Year</b></label>
+  <input type="number" class="w3-input w3-border w3-lightgrey" placeholder="2024"/><br>
+   <button onclick="alert('Getback to you🤗')" style="width:100%" class="w3-button w3-center w3-black w3-round w3-hover-black w3-padding">Submit</button>
+</form><br> </div>
+  </div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--Contact-->
+ <div id="contact" class="w3-container w3-margin-top w3-center w3-padding-32">
+ <p>
+ <h2 class="w3-wide w3-opacity"><b>CONTACT</h2>
+ <p></p>
+ <span class="w3-opacity"><i>A fan? Drop note!</i></span><p></p>
+ <i class="fa fa-map-marker w3-large"></i> Address: Ogbomosho Oyo State<br><p>
+ <i class="fa fa-phone w3-large"></i> Phone:+2347013578083<br><p>
+ <i class="fa fa-envelope w3-large"></i> Email: babjohn435@mail.com</b><br>
+   
+<form>
+<input type="text" placeholder="Your Name" class="w3-input w3-border w3-round" style="width:100%;height:50px" required><br>
+
+<input type="email" placeholder="Your email" class="w3-input w3-border w3-round" style="width:100%;height:50px" required><br><p>
+
+<input type="text" placeholder="Drop Message"  class="w3-input w3-border w3-round" style="width:100%;height:70px" required><p>
+<button  class="w3-button w3-hover-black w3-ripple w3-round w3-right w3-black">Submit</button>
+</form><br><p>
+<div class="w3-center w3-margin-top w3-opacity">
+<i class="fa fa-twitter w3-opacity"></i>
+<i class="fa fa-instagram w3-opacity"></i>
+<i class="fa fa-whatsapp w3-opacity"></i>
+<i class="fa fa-facebook-official w3-opacity"></i>
+<i class="fa fa-linkedin w3-opacity"></i>
+</div>
+<p>
+<img src="ogbo.jpeg" class="w3-image" style="width100%">
+<p class="w3-padding w3-center">Powered by<u>Johnson pedia</u>
+
+ </div>
+ 
+ 
+ 
+ 
+ <!--end content-->
+</div>
+<script>
+w3.slideshow(".slides",1500);
+function myOrder(){
+  document.getElementById("myBtn").innerHTML="Ordered";
+  document.getElementById('odal').style.display='block'
+};
+
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+</script>
+</body>
+</html>
